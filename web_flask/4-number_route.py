@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" this is the module to route hbnb"""
+""" module to route hbnb"""
 from flask import Flask
 from werkzeug.utils import escape
 
@@ -8,13 +8,13 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
-    """ shows message on root route"""
+    """ shows message root route"""
     return 'Hello HBNB!'
 
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """ shows message on hbnb route"""
+    """ shows message on route"""
     return 'HBNB'
 
 
@@ -33,7 +33,7 @@ def python_route(text):
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def number_route(n):
-    """ shows 'n is a number' only if n is an integer """
+    """ shows 'n is a number' only!! if n is an integer """
     return '{} is a number'.format(n)
 
 
